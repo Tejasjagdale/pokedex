@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <title>
+            pokedex
+        </title>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="icon" href="favicon.ico" type="image">
+        <style>
+            *{
+                margin: 0%;
+                padding:0%;
+                box-sizing: border-box;
+                font-family: flexo-regular,arial,sans-serif;
+            }
+
+            body{
+                overflow-x: hidden;
+                background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/91368489-6312-44c4-8a7d-75a7439a3642/d5gm6uv-9a471732-f6c0-451c-a6cc-b9770199074e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvOTEzNjg0ODktNjMxMi00NGM0LThhN2QtNzVhNzQzOWEzNjQyXC9kNWdtNnV2LTlhNDcxNzMyLWY2YzAtNDUxYy1hNmNjLWI5NzcwMTk5MDc0ZS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.kBfBResSVzjtic93WTLCfQ9O15XVQ-3swpJWOWVsDxg");
+                background-size:50px 50px;
+                font-size:100px;
+            }
+
+            .preloader{
+                position: fixed;
+                top:0;
+                left:0;
+                width:100%;
+                height:100vh;
+                display: flex;
+                background: #FFFFFF;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .circle{
+                position: relative;
+                width:350px;
+                height:350px;
+                border-radius: 50%;
+                background-color: white;
+                box-shadow: 0px 0px 20px 1px black;
+                overflow: hidden;
+            }
+
+            .sky{
+                position: absolute;
+                top:0;
+                left:0;
+                width:1400px;
+                height:350px;
+                background-color: yellowgreen;
+                background-image: url("https://ak.picdn.net/shutterstock/videos/1012154675/thumb/4.jpg");
+                animation:a 2s linear infinite;
+                background-size:25% 100%;
+                background-repeat:repeat-x;
+            }
+
+            .grass{
+                position: absolute;
+                bottom:0;
+                left:0;
+                width:700px;
+                height:100px;
+                background-image: url("sprites/grass.png");
+                animation:a 2s linear infinite;
+                background-size:25% 100%;
+                background-repeat:repeat-x;
+                z-index: 11;
+            }
+
+            .pika_img{
+                position:absolute;
+                top:170px;
+                left:50%;
+                width:150px;
+                 height:150px;
+                z-index: 10;
+                transform: translateX(-50%);
+            }
+
+            @keyframes a{
+                0%{left:0px;}
+                100%{left:-100%;}
+            }
+
+            .load{
+                   position: absolute;
+                   bottom:10%;
+                   left:50%;
+                   width:400px;
+                   height:50px;
+                   font-size:30%;
+                   color:white;
+                   display:flex;
+                   justify-content: center;
+                   align-items: center;
+                   background-color:#FD7D24 ;
+                   transform: translateX(-50%);
+                   box-shadow: 0px 0px 5px 1px black;
+            }
+            
+        </style>
+    </head>
+    <body>
+
+        <div class="preloader">
+            <div class="circle">
+                <div class="sky"></div>
+                <img src='https://i.pinimg.com/originals/ab/be/28/abbe28a943ed44fcd98452687f7c46c9.gif'  class="pika_img"/>
+                <div class="grass"></div>
+            </div>
+
+            <div class="load">
+                loading...
+           </div>
+        </div>
+    </body>
+    <script>
+        "use strict"
+    </script>
+</html>
